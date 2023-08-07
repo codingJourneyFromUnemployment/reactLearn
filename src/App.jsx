@@ -167,39 +167,142 @@
 //   );
 // }
 
-function Drink({ name }) {
-  let partOfPlant;
-  let caffeineContent;
-  let age;
-  if (name === 'tea') {
-    partOfPlant = 'leaf';
-    caffeineContent = '15–70 mg/cup';
-    age = '4,000+ years';
-  } else {
-    partOfPlant = 'bean';
-    caffeineContent = '80–185 mg/cup';
-    age = '1,000+ years';
-  }
-  return (
-    <section>
-      <h1>{name}</h1>
-      <dl>
-        <dt>Part of plant</dt>
-        <dd>{partOfPlant}</dd>
-        <dt>Caffeine content</dt>
-        <dd>{caffeineContent}</dd>
-        <dt>Age</dt>
-        <dd>{age}</dd>
-      </dl>
-    </section>
-  );
-}
+// import { people } from './data.js';
+// import { getImageUrl } from './utils.js';
 
-export default function DrinkList() {
-  return (
-    <div>
-      <Drink name="tea" />
-      <Drink name="coffee" />
-    </div>
-  );
-}
+// export default function List() {
+//   const chemistsItems = people.filter(person => person.profession === 'chemist').map(person =>
+//     <li key={person.id}>
+//       <img
+//         src={getImageUrl(person)}
+//         alt={person.name}
+//       />
+//       <p>
+//         <b>{person.name}:</b>
+//         {' ' + person.profession + ' '}
+//         known for {person.accomplishment}
+//       </p>
+//     </li>
+//   );
+//   const othersItems = people.filter(person => person.profession !== 'chemist').map(person =>
+//     <li key={person.id}>
+//       <img
+//         src={getImageUrl(person)}
+//         alt={person.name}
+//       />
+//       <p>
+//         <b>{person.name}:</b>
+//         {' ' + person.profession + ' '}
+//         known for {person.accomplishment}
+//       </p>
+//     </li>
+//   );
+
+//   return (
+//     <article>
+//       <h1>Chemist</h1>
+//       <u>{chemistsItems}</u>
+//       <h1>Others</h1>
+//       <u>{othersItems}</u>
+//     </article>
+//   );
+// }
+
+// import { recipes } from './data.js';
+
+// export function IngredientsList(props) {
+//   return (
+//     <ul>
+//       {props.ingredients.map((ingredient, index) => (
+//         <li key={index}>{ingredient}</li>
+//       ))}
+//     </ul>
+//   )
+// }
+
+// export function Recipe(props) {
+//   return (
+//     <ul>
+//       {props.recipeList.map((recipe) => (
+//         <li key={recipe.id}>
+//           <h2>{recipe.name}</h2>
+//           <p>{recipe.description}</p>
+//           <IngredientsList ingredients={recipe.ingredients} />
+//         </li>
+//       ))}
+//     </ul>
+//   )
+// }
+
+// export default function RecipeList() {
+//   return (
+//     <div>
+//       <h1>Recipes</h1>
+//       <Recipe recipeList={recipes} />
+//     </div>
+//   );
+// }
+
+// const poem = {
+//   lines: [
+//     'I write, erase, rewrite',
+//     'Erase again, and then',
+//     'A poppy blooms.'
+//   ]
+// };
+
+// export function Line(props) {
+//   return (
+//     <>
+//       <p>
+//         {props.line}
+//       </p>
+//       <hr />
+//     </>
+//   );
+// }
+
+// export default function Poem() {
+//   const linesWithOutLast = poem.lines.filter((line, index) => index !== poem.lines.length - 1);
+//   const lastLine = poem.lines[poem.lines.length - 1];
+//   return (
+//     <article>
+//         {linesWithOutLast.map((line, index) => (
+//           <Line key={index} line={line} />
+//         ))}
+//       <p>
+//         {lastLine}
+//       </p>
+//     </article>
+//   );
+// }
+
+
+
+// import Panel from './Panel.js';
+// import { getImageUrl } from './utils.js';
+
+// export default function Profile({ person }) {
+//   return (
+//     <Panel>
+//       <Header currPerson = { person } />
+//       <Avatar currPerson = { person } />
+//     </Panel>
+//   )
+// }
+
+// function Header({ currPerson } ) {
+//   return <h1>{currPerson.name}</h1>;
+// }
+
+// function Avatar({ currPerson }) {
+//   return (
+//     <img
+//       className="avatar"
+//       src={getImageUrl(currPerson)}
+//       alt={currPerson.name}
+//       width={50}
+//       height={50}
+//     />
+//   );
+// }
